@@ -1,0 +1,31 @@
+{
+  "WebPath": "\\hustSample/seee/soft19\\project-sample",
+  "Title": "这是一个例子，这里是项目的标题",
+  "ChangeTime": "2019-08-01T18:31:21.4413354+08:00",
+  "CreatedTime": "2019-03-24T22:45:57.0893043+08:00",
+  "ViewedTimes": 0,
+  "Template": "projectView",
+  "Author": null,
+  "Cover": "cover.jpg",
+  "Extras": {
+    "TeamName": "团队名称",
+    "Abstract": "这里是您项目的摘要，请您写一段话介绍一下吧。不要太长400个字以内哦",
+    "Teacher": "ָ指导老师的名字",
+    "ProjectLink": "https://github.com/the-real-jushen/chibicms",
+    "TeamMember": [
+      "张队长",
+      "这里填写上有团队成员的名字，队长名字请写第一个",
+      "张三",
+      "张四",
+      "有几个写几个记得删掉"
+    ],
+    "Posters": [
+      "1.jpg",
+      "2.jpg",
+      "有几个图片就写几条这个.png"
+    ],
+    "EmbeddedVideo": "<iframe height=498 width=510 src='http://player.youku.com/embed/XNDI5NDQ3NjgyMA==' frameborder=0 'allowfullscreen'></iframe>"
+  },
+  "TopPath": "G:\\project\\Parallel\\ChibiCMSHust\\chibicms\\Code\\ChibiCmsWeb\\wwwroot\\contents\\hustSample/seee/soft19\\project-sample",
+  "ContentType": "Content"
+}

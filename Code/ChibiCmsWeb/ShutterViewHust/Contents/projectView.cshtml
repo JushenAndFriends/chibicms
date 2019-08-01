@@ -1,0 +1,48 @@
+﻿@using Jushen.ChibiCms.ChibiContent
+@model Content
+@{
+    ViewData["Title"] = "defaultContentView";
+}
+@{
+    ViewData["Title"] = Model.Meta.Title;
+    Layout = "_Layout";
+}
+
+
+
+
+<div class="row pt-4 mb-5 text-center">
+    <div class="col-12">
+        <h2 class="text-white mb-4">@Model.Meta.Title</h2>
+        <div class="text-white mb-4">
+            @Html.PartialAsync("projectInfo", Model).Result
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row align-items-stretch" style="margin:5%">
+
+    <div class="col-12 col-md-12 col-lg-12" data-aos="fade-up">
+        @Html.Raw(Model.RenderHtml(ViewData["baseUrl"].ToString()))
+    </div>
+
+</div>
+
+
+
+<div class="row align-items-stretch" style="margin:5%">
+    @Html.PartialAsync("projectPosters", Model).Result
+</div>
+
+@section Scripts
+{
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+}
+@section Styles
+{
+     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/a11y-dark.min.css">
+}  

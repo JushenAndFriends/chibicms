@@ -1,0 +1,41 @@
+﻿@using Newtonsoft.Json;
+@using ChibiCmsWeb.Models
+@using Jushen.ChibiCms.ChibiContent
+@using ChibiCmsWeb.Helpers
+@model Content
+
+@{
+    var projInfo = JsonConvert.DeserializeObject<ProjectInfo>(JsonConvert.SerializeObject(Model.Meta.Extras));
+    var posters = projInfo.Posters;
+}
+
+<style>
+    table {
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    hr {
+        color: gray;
+        height: 1px;
+        background-color: gray;
+        width: 85%;
+    }
+</style>
+
+
+@for (int i = 0; i < posters.Count; i++)
+{
+    <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up">
+        <a href="@ViewData["baseUrl"]/@posters[i]" class="d-block photo-item" data-fancybox="gallery">
+            <img src="@ViewData["baseUrl"]/@posters[i]" alt="Image" class="img-fluid">
+            <div class="photo-text-more">
+                <span class="icon icon-search"></span>
+            </div>
+        </a>
+    </div>
+
+}
+
+
+

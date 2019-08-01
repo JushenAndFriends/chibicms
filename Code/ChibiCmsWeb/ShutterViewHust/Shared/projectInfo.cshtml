@@ -1,0 +1,60 @@
+﻿@using Newtonsoft.Json;
+@using ChibiCmsWeb.Models
+@using Jushen.ChibiCms.ChibiContent
+@using ChibiCmsWeb.Helpers
+@model Content
+
+@{
+    var projInfo = JsonConvert.DeserializeObject<ProjectInfo>(JsonConvert.SerializeObject(Model.Meta.Extras));
+}
+
+<style>
+    table {
+        text-align: left;
+        margin: 0 auto;
+    }
+    hr {
+        color: gray;
+        height: 1px;
+        background-color: gray;
+        width: 85%;
+    }
+</style>
+
+<div>
+    <table>
+        <tr>
+            <td>团队：</td>
+            <td>@projInfo.TeamName</td>
+        </tr>
+        <tr>
+            <td>摘要：</td>
+            <td>@projInfo.Abstract</td>
+        </tr>
+        <tr>
+            <td>团队成员：</td>
+            <td>
+                @for (int i = 0; i < projInfo.TeamMember.Count; i++)
+                {
+                <span class="badge @(i==0?"badge-primary":"badge-secondary")">@projInfo.TeamMember[i]</span> <span > </span>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>指导老师：</td>
+            <td>@projInfo.Teacher</td>
+        </tr>
+        <tr>
+            <td>项目文件：</td>
+            <td><a href="@projInfo.ProjectLink" target="_blank">@projInfo.ProjectLink</a></td>
+        </tr>
+    </table>
+
+</div>
+<hr>
+<div>
+    @Html.Raw(projInfo.EmbeddedVideo.RemoveScript())
+</div>
+<hr>
+
+
