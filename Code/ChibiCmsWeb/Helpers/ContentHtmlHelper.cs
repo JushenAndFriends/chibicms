@@ -16,7 +16,7 @@ namespace ChibiCmsWeb.Helpers
                 case ContentMeta.TypeContent:
                     return string.Format("/contents{0}", meta.WebPath);
                 case ContentMeta.TypeDirectory:
-                    return string.Format("/index/index{0}", meta.WebPath);
+                    return string.Format("/index{0}", meta.WebPath);
 
                 default:
                     return "#";
