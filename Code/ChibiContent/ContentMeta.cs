@@ -17,11 +17,16 @@ namespace Jushen.ChibiCms.ChibiContent
         /// content type is content
         /// </summary>
         public const string TypeContent = "Content";
-
+        
         /// <summary>
         /// content type is directory
         /// </summary>
         public const string TypeDirectory = "Directory";
+
+        /// <summary>
+        /// content type is directory
+        /// </summary>
+        public const string TypeLink = "Link";
 
         /// <summary>
         /// if this file exsists, than this is a directory, only include this is the folder is both content and a directory
@@ -58,6 +63,8 @@ namespace Jushen.ChibiCms.ChibiContent
 
         public string Cover { get; set; }
 
+        public string Link { get; set; }
+
         /// <summary>
         /// hold all kinds of extra infos
         /// </summary>
@@ -72,7 +79,7 @@ namespace Jushen.ChibiCms.ChibiContent
         public string ContentType { get; set; } = "Content";
 
         private string realFileName = MetaFileName;
-
+ 
         public ContentMeta()
         {
 
@@ -84,9 +91,9 @@ namespace Jushen.ChibiCms.ChibiContent
         /// </summary>
         /// <param name="path"></param>
         /// <param name="webPath"></param>
-        public ContentMeta(string path, string webPath) : this(path, webPath, MetaFileName)
+        public ContentMeta(string path,string webPath):this(path,webPath,MetaFileName)
         {
-
+            
         }
 
         public ContentMeta(string path, string webPath, string metaFile)
@@ -98,7 +105,7 @@ namespace Jushen.ChibiCms.ChibiContent
                 realFileName = metaFile;
                 JsonConvert.PopulateObject(metaJson, this);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 if (Directory.Exists(path))
                 {

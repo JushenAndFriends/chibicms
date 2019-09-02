@@ -1,7 +1,7 @@
 {
   "WebPath": "\\hustSample/seee/soft19\\project-sample",
   "Title": "这是一个例子，这里是项目的标题",
-  "ChangeTime": "2019-08-01T18:42:09+08:00",
+  "ChangeTime": "2019-08-01T18:42:09.1228411+08:00",
   "CreatedTime": "2019-03-24T22:45:57.0893043+08:00",
   "ViewedTimes": 0,
   "Template": "projectView",
@@ -26,6 +26,6 @@
     ],
     "EmbeddedVideo": "<iframe height=498 width=510 src='http://player.youku.com/embed/XNDI5NDQ3NjgyMA==' frameborder=0 'allowfullscreen'></iframe>"
   },
-  "TopPath": "H:\\WorkSpaceSync\\Parallel\\ChibiCMSHust\\chibicms\\Code\\ChibiCmsWeb\\wwwroot\\contents\\hustSample/seee/soft19\\project-sample",
+  "TopPath": "G:\\project\\Parallel\\ChibiCMSHust\\chibicms\\Code\\ChibiCmsWeb\\wwwroot\\contents\\hustSample/seee/soft19\\project-sample",
   "ContentType": "Content"
 }

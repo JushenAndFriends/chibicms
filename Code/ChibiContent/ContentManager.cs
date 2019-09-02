@@ -121,7 +121,14 @@ namespace Jushen.ChibiCms.ChibiContent
                 }
             }
             //sort and return
-            directoryMeta.AddRange(metas.OrderByDescending(mt => mt.ChangeTime).Skip((page - 1) * pageSize).Take(pageSize).ToList());
+            if (pageSize > 0)
+            {
+                directoryMeta.AddRange(metas.OrderByDescending(mt => mt.ChangeTime).Skip((page - 1) * pageSize).Take(pageSize).ToList());
+            }
+            else
+            {
+                directoryMeta.AddRange(metas.OrderByDescending(mt => mt.ChangeTime).ToList());
+            }
             return (directoryMeta, rootMeta);
 
         }

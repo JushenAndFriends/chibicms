@@ -14,6 +14,7 @@ namespace ChibiCmsWeb.Helpers
             switch (meta.ContentType)
             {
                 case ContentMeta.TypeContent:
+                case ContentMeta.TypeLink:
                     return string.Format("/contents{0}", meta.WebPath);
                 case ContentMeta.TypeDirectory:
                     return string.Format("/index{0}", meta.WebPath);
